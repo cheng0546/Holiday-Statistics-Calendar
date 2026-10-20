@@ -1,0 +1,25 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: -apple-system, "Segoe UI", "PingFang SC", sans-serif; background: #f4f6fa; color: #222; }
+header { background: #3b6fd4; color: #fff; padding: 12px 20px; }
+header h1 { margin: 0; font-size: 1.4rem; }
+main { max-width: 960px; margin: 0 auto; padding: 16px; }
+form { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; background: #fff; padding: 12px; border-radius: 8px; }
+input, button { padding: 8px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px; }
+button { cursor: pointer; background: #3b6fd4; color: #fff; border: 0; }
+#message { min-height: 1.4em; margin: 8px 0; color: #c0392b; }
+.nav { display: flex; align-items: center; gap: 10px; }
+.nav h2 { flex: 1; text-align: center; margin: 8px 0; }
+#calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; background: #ddd; border: 1px solid #ddd; }
+.dow { background: #eef1f7; text-align: center; padding: 6px 0; font-weight: bold; }
+.cell { background: #fff; min-height: 90px; padding: 2px; overflow: hidden; }
+.cell.empty { background: #f7f7f7; }
+.cell.today .day { background: #3b6fd4; color: #fff; border-radius: 50%; }
+.day { display: inline-block; min-width: 22px; text-align: center; font-size: .85rem; }
+.tag { display: block; color: #fff; font-size: .72rem; margin-top: 2px; padding: 1px 4px; border-radius: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#list { list-style: none; padding: 0; }
+#list li { display: flex; align-items: center; gap: 8px; background: #fff; margin-bottom: 6px; padding: 8px; border-radius: 6px; }
+#list .dot, #legend .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+#list span.text { flex: 1; }
+#list button { background: #c0392b; padding: 4px 10px; }
+#legend { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+@media (max-width: 600px) { .cell { min-height: 60px; } .tag { font-size: .6rem; } }
