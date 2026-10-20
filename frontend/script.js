@@ -1,5 +1,5 @@
 // 后端 API 地址：部署后端后修改此处，或在页面前设置 window.API_BASE
-const API_BASE = window.API_BASE || 'http://localhost:3000';
+const API_BASE = window.API_BASE || 'https://holiday-statistics-calendar.onrender.com';
 const REFRESH_MS = 15000;
 const COLORS = ['#e6194b', '#3cb44b', '#4363d8', '#f58231', '#911eb4', '#008080', '#9a6324', '#800000', '#808000', '#f032e6', '#000075', '#469990'];
 
