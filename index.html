@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7f4">
+    <title>假期统计日历</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">GROUP HOLIDAY PLANNER</p>
+          <h1>假期统计日历</h1>
+          <p class="subtitle">看看大家什么时候休息，轻松安排相聚时间。</p>
+        </div>
+        <div class="privacy-note" role="note">
+          <span aria-hidden="true">🔒</span>
+          <span>记录保存在当前浏览器中；不同设备之间不会自动同步。</span>
+        </div>
+      </header>
+
+      <section class="calendar-panel" aria-label="假期日历">
+        <div class="calendar-heading">
+          <div class="month-navigation">
+            <button class="icon-button" id="previous-month" type="button" aria-label="上个月">‹</button>
+            <h2 id="month-title" aria-live="polite"></h2>
+            <button class="icon-button" id="next-month" type="button" aria-label="下个月">›</button>
+          </div>
+          <button class="today-button" id="go-today" type="button">回到本月</button>
+        </div>
+        <div class="calendar-grid" id="calendar" role="grid" aria-label="月历"></div>
+      </section>
+
+      <div class="content-grid">
+        <section class="records-panel" aria-labelledby="records-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">THIS MONTH</p>
+              <h2 id="records-title">假期安排</h2>
+            </div>
+            <span class="record-count" id="record-count"></span>
+          </div>
+          <div class="record-list" id="record-list"></div>
+        </section>
+
+        <section class="form-panel" aria-labelledby="form-title">
+          <p class="eyebrow">ADD A HOLIDAY</p>
+          <h2 id="form-title">添加假期</h2>
+          <form id="holiday-form">
+            <label for="name">姓名</label>
+            <input id="name" name="name" type="text" maxlength="40" placeholder="例如：小明" required>
+
+            <div class="date-fields">
+              <div>
+                <label for="start-date">开始日期</label>
+                <input id="start-date" name="startDate" type="date" required>
+              </div>
+              <div>
+                <label for="end-date">结束日期</label>
+                <input id="end-date" name="endDate" type="date" required>
+              </div>
+            </div>
+
+            <p class="form-error" id="form-error" role="alert"></p>
+            <div class="form-actions">
+              <button class="primary-button" id="submit-button" type="submit">保存假期</button>
+              <button class="cancel-button" id="cancel-edit" type="button" hidden>取消编辑</button>
+            </div>
+          </form>
+        </section>
+      </div>
+      <footer>日期按本地时间显示 · 同一浏览器的其他标签页会自动更新</footer>
+    </main>
+  </body>
+</html>
